@@ -1,0 +1,26 @@
+resources:
+- repo: self
+
+pool:
+  vmImage: ubuntu-16.04
+  demands: npm
+
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node'
+  inputs:
+    versionSpec: 11.x
+    checkLatest: true
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+
+- powershell: node convert.js $(Build.ArtifactStagingDirectory)
+  displayName: 'PowerShell Script'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
