@@ -20,7 +20,3 @@ steps:
 - powershell: |   
   node convert.js $(Build.ArtifactStagingDirectory)
   displayName: 'PowerShell Script'
-
-
-
-
