@@ -1,0 +1,23 @@
+{
+    "name": "the-real-jamstack",
+    "version": "1.0.0",
+    "description": "All the JAM flavors",
+    "main": "convert.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/devingoble/The-Real-JAMStack.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/devingoble/The-Real-JAMStack/issues"
+    },
+    "homepage": "https://github.com/devingoble/The-Real-JAMStack#readme",
+    "dependencies": {
+        "svg-to-png": "^4.0.0"
+    },
+    "devDependencies": {}
+}
