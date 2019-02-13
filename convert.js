@@ -4,8 +4,7 @@ const svgFolder = path.join(__dirname, 'svg');
 const pngFolder = process.argv[2]; //path.join(__dirname, 'png');
 const options = {
     defaultWidth: '128px',
-    defaultHeight: '128px',
-    debug: true
+    defaultHeight: '128px'
 };
 
 conv.convert(svgFolder, pngFolder, options)
