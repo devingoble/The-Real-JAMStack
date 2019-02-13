@@ -2,7 +2,7 @@ resources:
 - repo: self
 
 pool:
-  vmImage: Hosted VS2017
+  vmImage: Hosted Ubuntu 1604
   demands: npm
 
 steps:
