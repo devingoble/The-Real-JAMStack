@@ -19,3 +19,8 @@ steps:
 
 - powershell: node convert.js $(Build.ArtifactStagingDirectory)
   displayName: 'PowerShell Script'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
