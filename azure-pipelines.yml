@@ -17,10 +17,10 @@ steps:
   inputs:
     verbose: false
 
-- powershell: node convert.js $(Build.ArtifactStagingDirectory)
+- powershell: node convert.js $(Build.ArtifactStagingDirectory)/png
   displayName: 'PowerShell Script'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/png'
     artifactName: drop
