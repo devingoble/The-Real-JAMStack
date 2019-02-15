@@ -26,7 +26,15 @@ steps:
 - powershell: node convert.js $(Build.ArtifactStagingDirectory)/png
   displayName: 'PowerShell Script'
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: $(Build.ArtifactStagingDirectory)/png 
+    includeRootFolder: false 
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/jams.zip' 
+    replaceExistingArchive: true
+
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/png'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/png/jams.zip'
     artifactName: drop
