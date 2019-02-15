@@ -24,7 +24,7 @@ steps:
     verbose: false
 
 - powershell: node convert.js $(Build.ArtifactStagingDirectory)/png
-  displayName: 'PowerShell Script'
+  displayName: 'Run Node script'
 
 - task: ArchiveFiles@2
   inputs:
@@ -36,5 +36,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/png/jams.zip'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/jams.zip'
     artifactName: drop

@@ -1,0 +1,1 @@
+Zip up the pngs for release.
